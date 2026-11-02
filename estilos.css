@@ -1,0 +1,101 @@
+:root {
+  --principal: #142b4a;
+  --secundario: #244c70;
+  --acento: #d5aa53;
+  --fondo: #f4f6f9;
+  --texto: #263445;
+  --blanco: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--texto); line-height: 1.7; background: var(--blanco); }
+a { text-decoration: none; color: inherit; }
+header {
+  background: var(--principal); color: var(--blanco); padding: 15px 7%;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  position: sticky; top: 0; z-index: 100;
+}
+.logo { font-size: 1.1rem; font-weight: bold; }
+.logo span { color: var(--acento); }
+nav { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+nav a { font-size: .92rem; transition: color .2s; }
+nav a:hover, nav a[aria-current="page"] { color: var(--acento); }
+.hero {
+  min-height: 480px;
+  background: linear-gradient(90deg, rgba(10,28,49,.94), rgba(10,28,49,.68)),
+    url("../imagenes/portada.jpg") center/cover;
+  color: var(--blanco); display: flex; align-items: center; padding: 75px 10%;
+}
+.hero-content { max-width: 760px; }
+.etiqueta { color: var(--acento); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: .85rem; }
+.hero h1 { font-size: clamp(2.35rem, 6vw, 4rem); line-height: 1.1; margin: 18px 0; }
+.hero p { font-size: 1.12rem; margin-bottom: 25px; max-width: 650px; }
+.boton { display: inline-block; background: var(--acento); color: #17283b; padding: 11px 22px; border-radius: 5px; font-weight: bold; border: 2px solid var(--acento); transition: .2s; cursor: pointer; }
+.boton:hover { background: transparent; color: var(--blanco); }
+.boton-secundario { background: transparent; color: var(--blanco); margin-left: 8px; }
+section { padding: 65px 8%; }
+.titulo { text-align: center; margin: 0 auto 38px; }
+.titulo h2 { color: var(--principal); font-size: clamp(1.75rem, 4vw, 2.45rem); margin-bottom: 8px; }
+.titulo p { max-width: 720px; margin: auto; color: #657080; }
+.linea { width: 65px; height: 4px; background: var(--acento); margin: 15px auto; }
+.fondo { background: var(--fondo); }
+.biografia { display: grid; grid-template-columns: minmax(240px, .85fr) 1.3fr; gap: 40px; align-items: center; }
+.foto-candidato { width: 100%; max-height: 440px; object-fit: cover; border-radius: 10px; background: #e1e6ed; }
+.biografia h2, .biografia h3 { color: var(--principal); margin-bottom: 14px; }
+.biografia p { margin-bottom: 14px; }
+.tarjetas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px; }
+.tarjeta { background: var(--blanco); padding: 28px; border-radius: 10px; border-top: 4px solid var(--acento); box-shadow: 0 5px 20px #142b4a12; }
+.tarjeta h3 { color: var(--principal); margin-bottom: 10px; font-size: 1.3rem; }
+.tarjeta .icono { font-size: 2rem; margin-bottom: 10px; }
+.tarjetas-lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.tarjeta-lista { padding: 22px; border: 1px solid #e0e5ec; border-radius: 8px; background: white; }
+.tarjeta-lista h3 { color: var(--principal); margin-bottom: 8px; }
+.lista { padding-left: 22px; }
+.lista li { margin: 8px 0; }
+.propuestas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.propuesta { padding: 24px; border: 1px solid #e0e5ec; border-radius: 8px; transition: transform .2s, box-shadow .2s; background: white; }
+.propuesta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px #142b4a18; }
+.numero { color: #92702f; font-size: 1.8rem; font-weight: bold; }
+.propuesta h3 { color: var(--principal); margin: 6px 0 12px; }
+.propuesta h4 { color: var(--secundario); margin-top: 12px; }
+.propuesta p { margin-bottom: 7px; }
+.equipo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 23px; }
+.integrante { background: white; text-align: center; padding: 24px 18px; border-radius: 10px; box-shadow: 0 5px 20px #142b4a10; }
+.integrante img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; background: #e1e6ed; margin-bottom: 12px; }
+.integrante h3 { color: var(--principal); }
+.cargo { color: #92702f; font-weight: bold; margin: 5px 0 10px; }
+.evento { background: white; border-left: 5px solid var(--acento); padding: 20px 25px; margin: 15px auto; max-width: 900px; box-shadow: 0 3px 15px #142b4a0c; }
+.evento h3 { color: var(--principal); margin-bottom: 6px; }
+.noticias { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.noticia { border: 1px solid #e0e5ec; border-radius: 8px; overflow: hidden; background: white; }
+.noticia img { width: 100%; height: 180px; object-fit: cover; background: #e1e6ed; }
+.noticia-contenido { padding: 18px; }
+.noticia h3 { color: var(--principal); margin-bottom: 8px; }
+.contacto { background: var(--principal); color: white; }
+.contacto .titulo h2 { color: white; }
+.contacto .titulo p, .aviso { color: #dce5ef; }
+.contacto-contenido { max-width: 720px; margin: auto; }
+.contacto form { display: grid; gap: 14px; margin-top: 22px; }
+.contacto input, .contacto textarea { width: 100%; padding: 12px; border: 1px solid #d1d9e2; border-radius: 5px; font: inherit; }
+.contacto textarea { min-height: 120px; resize: vertical; }
+.contacto .boton:hover { color: white; }
+.aviso { font-size: .85rem; margin-top: 12px; }
+#estado { margin-top: 12px; }
+footer { background: #0b1a2b; color: white; padding: 25px 8%; text-align: center; }
+footer p { margin: 6px 0; font-size: .9rem; }
+.redes { margin: 12px 0; }
+.redes a { display: inline-block; margin: 5px 10px; color: var(--acento); }
+@media (max-width: 850px) {
+  header { flex-direction: column; }
+  nav { justify-content: center; gap: 12px; }
+  .biografia { grid-template-columns: 1fr; }
+  .propuestas, .equipo, .noticias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  header { padding: 14px 5%; }
+  section { padding: 48px 6%; }
+  .hero { min-height: 450px; padding: 50px 7%; }
+  .tarjetas, .tarjetas-lista, .propuestas, .equipo, .noticias { grid-template-columns: 1fr; }
+  .boton { margin: 5px 0; }
+  .boton-secundario { margin-left: 0; }
+}

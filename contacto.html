@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Ciudadanos Unidos</title>
+  <meta name="description" content="Información de contacto del proyecto Ciudadanos Unidos.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">PARTIDO <span>CIUDADANOS UNIDOS</span></a>
+  <nav aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="candidato.html">Candidato y objetivos</a>
+    <a href="metas-promesas.html">Metas y promesas</a>
+    <a href="propuestas.html">Propuestas</a>
+    <a href="equipo-agenda.html">Equipo y agenda</a>
+    <a href="contacto.html" aria-current="page">Contacto</a>
+  </nav>
+</header>
+<main>
+
+<section class="contacto">
+  <div class="titulo"><h2>Contacto</h2><div class="linea"></div><p>Consulta los canales oficiales o prepara un mensaje para el equipo.</p></div>
+  <div class="contacto-contenido">
+    <p><strong>Correo:</strong> gels6069@gmail.com </p>
+    <p><strong>Teléfono:</strong> 2216555109</p>
+    <p><strong>Ubicación:</strong> Puebla capital</p>
+    <form id="formulario">
+      <label for="nombre">Nombre</label><input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      <label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+      <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+      <button type="submit" class="boton">Preparar mensaje</button>
+    </form>
+    <p class="aviso"></p>
+    <p id="estado" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <p><strong>Partido Ciudadanos Unidos</strong></p>
+  <div class="redes">
+    <a href="https://www.facebook.com/share/1ExUPPzhdR/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://www.instagram.com/enriquebracamontespcu?xtok=bWx2d2JueHcybmwz/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.tiktok.com/@enrique.bracamontespcu?_r=1&_t=ZS-9AvG0CPQHha" target="_blank" rel="noopener noreferrer">Tik Tok</a>
+  </div>
+  <p>Aviso de privacidad | Información legal | Transparencia</p>
+  <p>© <span id="anio"></span> Partido Ciudadanos Unidos. Sitio de proyecto de simulación de elecciones.</p>
+</footer>
+<script>document.getElementById("anio").textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById("formulario").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const nombre = document.getElementById("nombre").value.trim();
+  document.getElementById("estado").textContent =
+    "Gracias, " + nombre + ". Muy pronto te escribiremos para responder a tu solicitud";
+});
+</script>
+</body>
+</html>
